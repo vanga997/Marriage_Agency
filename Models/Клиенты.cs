@@ -8,7 +8,7 @@ namespace Marriage_Agency.Models
         public long КодКлиента { get; set; }
         public string Фио { get; set; }
         public string Пол { get; set; }
-        public byte[] ДатаРождения { get; set; }
+        public DateTime ДатаРождения { get; set; }
         public long Возраст { get; set; }
         public long Рост { get; set; }
         public long Вес { get; set; }

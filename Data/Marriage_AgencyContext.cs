@@ -30,8 +30,9 @@ namespace Marriage_Agency.Data
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-            //    optionsBuilder.UseSqlite("Data Source=D:\\Учёба\\2 курс\\Marriage Agency\\Marriage_Agency.db");
+                //    optionsBuilder.UseSqlite("Data Source=D:\\Учёба\\2 курс\\Marriage Agency\\Marriage_Agency.db");
                 optionsBuilder.UseSqlServer("Data Source=SSMLNSK;Initial Catalog=Marriage_Agency;Integrated Security=True");
+                //optionsBuilder.UseSqlServer("Data Source=LEO-ПК\\SQLEXPRESS;Initial Catalog=Marriage_Agency;Integrated Security=True");
             }
         }
 
@@ -131,7 +132,7 @@ namespace Marriage_Agency.Data
                 entity.Property(e => e.ДатаРождения)
                     .IsRequired()
                     .HasColumnName("Дата_рождения")
-                    .HasColumnType("DataTime");
+                    .HasColumnType("DateTime");
 
                 entity.Property(e => e.ИнформацияОПартнёре)
                     .IsRequired()
@@ -314,7 +315,7 @@ namespace Marriage_Agency.Data
 
                 entity.Property(e => e.Дата)
                     .IsRequired()
-                    .HasColumnType("DataTime");
+                    .HasColumnType("DateTime");
 
                 entity.Property(e => e.КодСотрудника)
                     .HasColumnName("Код_сотрудника")
